@@ -1,0 +1,22 @@
+{
+    "name":"Stopwatch Extension",
+    "description":"My extesion",
+    "version":"0.1",
+    "manifest_version":2,
+    "browser_action":{
+        "default_popup":"Stopwatch.html"
+    },
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+    },
+	"content_scripts": [
+	{
+		"matches": ["<all_urls>"],
+		"js": ["background.js"]
+	}
+	],
+	"permissions": [
+		"storage", "tabs"
+	]
+}
